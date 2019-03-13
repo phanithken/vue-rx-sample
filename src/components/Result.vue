@@ -54,6 +54,10 @@ export default {
         }
     },
     subscriptions: function () {
+
+        console.log('************ subscription **************')
+        console.log(this)
+
         const $q = this.$watchAsObservable('q', { immediate: true })
             .pipe(
                 pluck('newValue'),
